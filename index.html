@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Délice Gourmand</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
+    header { background-color: #c0392b; color: white; padding: 50px 20px; text-align: center; }
+    header h1 { margin:0; font-size:3em; }
+    header p { margin:10px 0 0 0; font-size:1.2em; }
+    nav { background: #e74c3c; display:flex; justify-content:center; flex-wrap:wrap; }
+    nav a { color:white; margin:10px 15px; text-decoration:none; font-weight:bold; font-size:1.1em; }
+    nav a:hover { text-decoration: underline; }
+    section { padding:50px 20px; max-width:1000px; margin:auto; }
+    section h2 { color:#c0392b; margin-bottom:20px; }
+    .tabs { display:flex; margin-bottom:20px; cursor:pointer; flex-wrap:wrap; }
+    .tab { padding:10px 20px; background:#e74c3c; color:white; margin-right:5px; border-radius:5px; }
+    .tab.active { background:#c0392b; }
+    .menu-content { display:none; }
+    .menu-content.active { display:block; }
+    .menu-item { margin-bottom:20px; }
+    .menu-item h3 { margin:0 0 5px 0; }
+    .menu-item p { margin:0; }
+    .gallery img { width:100%; max-width:300px; margin:10px; border-radius:10px; }
+    footer { background:#333; color:white; text-align:center; padding:30px 20px; margin-top:40px; }
+    form { max-width:500px; margin:auto; display:flex; flex-direction:column; }
+    input, textarea, select, button { margin-bottom:15px; padding:10px; font-size:1em; border-radius:5px; border:1px solid #ccc; }
+    button { background:#c0392b; color:white; border:none; cursor:pointer; }
+    button:hover { background:#e74c3c; }
+    @media(min-width:600px){.gallery{display:flex; justify-content:center; flex-wrap:wrap;}}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Le Délice Gourmand</h1>
+  <p>Saveurs authentiques, ambiance chaleureuse</p>
+</header>
+
+<nav>
+  <a href="#accueil">Accueil</a>
+  <a href="#menu">Menu</a>
+  <a href="#apropos">À propos</a>
+  <a href="#reservation">Réservation</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="accueil">
+  <h2>Bienvenue au Délice Gourmand</h2>
+  <p>Découvrez notre cuisine française raffinée, avec des plats faits maison préparés avec amour et des ingrédients frais de saison.</p>
+  <div class="gallery">
+    <img src="https://via.placeholder.com/300x200?text=Restaurant" alt="Restaurant">
+    <img src="https://via.placeholder.com/300x200?text=Plats" alt="Plats">
+    <img src="https://via.placeholder.com/300x200?text=Desserts" alt="Desserts">
+  </div>
+</section>
+
+<section id="menu">
+  <h2>Notre Menu</h2>
+  <div class="tabs">
+    <div class="tab active" data-tab="entrees">Entrées</div>
+    <div class="tab" data-tab="plats">Plats</div>
+    <div class="tab" data-tab="desserts">Desserts</div>
+  </div>
+  <div class="menu-content active" id="entrees">
+    <div class="menu-item">
+      <h3>Salade César</h3>
+      <p>Salade fraîche avec poulet grillé, croûtons et parmesan.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Soupe de légumes</h3>
+      <p>Soupe maison avec légumes frais de saison.</p>
+    </div>
+  </div>
+  <div class="menu-content" id="plats">
+    <div class="menu-item">
+      <h3>Filet de saumon</h3>
+      <p>Saumon grillé accompagné de légumes de saison.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Boeuf bourguignon</h3>
+      <p>Classique de la cuisine française avec sauce riche et légumes.</p>
+    </div>
+  </div>
+  <div class="menu-content" id="desserts">
+    <div class="menu-item">
+      <h3>Tarte aux pommes</h3>
+      <p>Tarte maison servie avec une boule de glace vanille.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Mousse au chocolat</h3>
+      <p>Délicieuse mousse légère et onctueuse.</p>
+    </div>
+  </div>
+</section>
+
+<section id="apropos">
+  <h2>À propos de nous</h2>
+  <p>Le Délice Gourmand est un restaurant familial fondé en 2010, dédié à la cuisine française traditionnelle avec une touche moderne. Nous vous accueillons dans un cadre chaleureux et convivial, pour partager un moment gourmand en famille ou entre amis.</p>
+</section>
+
+<section id="reservation">
+  <h2>Réservation</h2>
+  <form action="mailto:contact@ledelicegourmand.fr" method="post" enctype="text/plain">
+    <input type="text" name="nom" placeholder="Nom" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="telephone" placeholder="Téléphone" required>
+    <select name="personnes" required>
+      <option value="">Nombre de personnes</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5+">5+</option>
+    </select>
+    <input type="date" name="date" required>
+    <input type="time" name="heure" required>
+    <textarea name="message" placeholder="Message (optionnel)"></textarea>
+    <button type="submit">Réserver</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contactez-nous</h2>
+  <p><strong>Adresse :</strong> 13 rue du Général Bares, 31400 Toulouse</p>
+  <p><strong>Téléphone :</strong> 05 61 00 00 00</p>
+  <p><strong>Email :</strong> contact@ledelicegourmand.fr</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Le Délice Gourmand. Tous droits réservés.</p>
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const contents = document.querySelectorAll('.menu-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      contents.forEach(c => c.classList.remove('active'));
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

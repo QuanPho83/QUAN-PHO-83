@@ -14,18 +14,19 @@
     nav a:hover { text-decoration: underline; }
     footer { background:#333; color:white; text-align:center; padding:30px 20px; margin-top:40px; }
 
-    /* Conteneur principal avec sidebar */
-    .content-wrapper { display: flex; align-items: flex-start; gap: 40px; max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+    /* Conteneur principal avec sidebar collée au bord gauche */
+    .content-wrapper { display: flex; max-width: 1200px; margin: 20px auto; padding-left: 0; }
 
     .sidebar {
       width: 220px;
       background: #f8f8f8;
       padding: 20px;
       border-radius: 10px;
+      margin-left: 0; /* collée au bord gauche */
     }
     .sidebar h3 { color: #c0392b; margin-top:0; }
 
-    .main-content { flex: 1; }
+    .main-content { flex: 1; padding-left: 40px; } /* espace entre sidebar et contenu */
 
     section { margin-bottom: 50px; }
     section h2 { color:#c0392b; margin-bottom:20px; }
@@ -59,7 +60,7 @@
 
 <div class="content-wrapper">
 
-  <!-- Sidebar -->
+  <!-- Sidebar collée au bord gauche -->
   <div class="sidebar">
     <h3>🕒 Horaires d'ouverture</h3>
     <p><strong>Lundi :</strong> 11h30 – 22h30</p>

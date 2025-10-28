@@ -50,14 +50,31 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="accueil">
-  <h2>Bienvenue au Quan Pho 83</h2>
-  <p>Découvrez notre cuisine vietnamienne raffinée, avec des plats faits maison préparés avec amour et des ingrédients frais de saison.</p>
-  <div class="gallery">
-    <img src="https://via.placeholder.com/300x200?text=Restaurant" alt="Restaurant">
-    <img src="https://via.placeholder.com/300x200?text=Plats" alt="Plats">
-    <img src="https://via.placeholder.com/300x200?text=Desserts" alt="Desserts">
+<section id="accueil" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+  
+  <!-- Colonne gauche : horaires -->
+  <div style="flex: 1; min-width: 250px; background: #f8f8f8; padding: 20px; border-radius: 10px;">
+    <h3 style="color: #c0392b;">🕒 Horaires d'ouverture</h3>
+    <p><strong>Lundi :</strong> 11h30 – 22h30</p>
+    <p><strong>Mardi :</strong> 11h30 – 22h30</p>
+    <p><strong>Mercredi :</strong> 11h30 – 22h30</p>
+    <p><strong>Jeudi :</strong> 11h30 – 22h30</p>
+    <p><strong>Vendredi :</strong> 11h30 – 22h30</p>
+    <p><strong>Samedi :</strong> 11h30 – 22h30</p>
+    <p><strong>Dimanche :</strong> 11h30 – 15h30</p>
   </div>
+
+  <!-- Colonne droite : texte + images -->
+  <div style="flex: 2; min-width: 300px;">
+    <h2>Bienvenue au Quan Pho 83</h2>
+    <p>Découvrez notre cuisine vietnamienne raffinée, avec des plats faits maison préparés avec amour et des ingrédients frais de saison.</p>
+    <div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <img src="https://via.placeholder.com/300x200?text=Restaurant" alt="Restaurant" style="margin:10px; border-radius:10px;">
+      <img src="https://via.placeholder.com/300x200?text=Plats" alt="Plats" style="margin:10px; border-radius:10px;">
+      <img src="https://via.placeholder.com/300x200?text=Desserts" alt="Desserts" style="margin:10px; border-radius:10px;">
+    </div>
+  </div>
+
 </section>
 
 <section id="menu">
@@ -216,6 +233,7 @@
 
 </body>
 </html>
+
 
 
 

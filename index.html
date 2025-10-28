@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quan Pho 83 - Restaurant Vietnamien au centre de Toulouse</title>
-  <meta name="description" content="Restaurant vietnamien, plats faits maison au centre de Toulouse.">
-  <meta name="keywords" content="restaurant vietnamien, Toulouse, nems, pho, soupe pho boeuf bo bun nem, restaurant asiatique">
-  <meta name="google-site-verification" content="ZDUGdie6n9XAifv4IGTWEi0v1sK5tWMNqF4V8OuXjFI" />
   <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
     header { background-color: #c0392b; color: white; padding: 50px 20px; text-align: center; }
@@ -15,8 +12,24 @@
     nav { background: #e74c3c; display:flex; justify-content:center; flex-wrap:wrap; }
     nav a { color:white; margin:10px 15px; text-decoration:none; font-weight:bold; font-size:1.1em; }
     nav a:hover { text-decoration: underline; }
-    section { padding:50px 20px; max-width:1000px; margin:auto; }
+    footer { background:#333; color:white; text-align:center; padding:30px 20px; margin-top:40px; }
+
+    /* Conteneur principal avec sidebar */
+    .content-wrapper { display: flex; align-items: flex-start; gap: 40px; max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+
+    .sidebar {
+      width: 220px;
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .sidebar h3 { color: #c0392b; margin-top:0; }
+
+    .main-content { flex: 1; }
+
+    section { margin-bottom: 50px; }
     section h2 { color:#c0392b; margin-bottom:20px; }
+
     .tabs { display:flex; margin-bottom:20px; cursor:pointer; flex-wrap:wrap; }
     .tab { padding:10px 20px; background:#e74c3c; color:white; margin-right:5px; border-radius:5px; }
     .tab.active { background:#c0392b; }
@@ -26,30 +39,6 @@
     .menu-item h3 { margin:0 0 5px 0; }
     .menu-item p { margin:0; }
     .gallery img { width:100%; max-width:300px; margin:10px; border-radius:10px; }
-    footer { background:#333; color:white; text-align:center; padding:30px 20px; margin-top:40px; }
-    form { max-width:500px; margin:auto; display:flex; flex-direction:column; }
-    input, textarea, select, button { margin-bottom:15px; padding:10px; font-size:1em; border-radius:5px; border:1px solid #ccc; }
-    button { background:#c0392b; color:white; border:none; cursor:pointer; }
-    button:hover { background:#e74c3c; }
-    @media(min-width:600px){.gallery{display:flex; justify-content:center; flex-wrap:wrap;}}
-
-    /* Sidebar fixe à gauche */
-    .sidebar {
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      width: 220px;
-      background: #f8f8f8;
-      padding: 20px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-      border-radius: 0 10px 10px 0;
-    }
-
-    .sidebar h3 { color:#c0392b; }
-
-    /* Décalage du contenu principal à droite de la sidebar */
-    .main-content { margin-left: 240px; }
   </style>
 </head>
 <body>
@@ -68,45 +57,47 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<!-- Sidebar des horaires -->
-<div class="sidebar">
-  <h3>🕒 Horaires d'ouverture</h3>
-  <p><strong>Lundi :</strong> 11h30 – 22h30</p>
-  <p><strong>Mardi :</strong> 11h30 – 22h30</p>
-  <p><strong>Mercredi :</strong> 11h30 – 22h30</p>
-  <p><strong>Jeudi :</strong> 11h30 – 22h30</p>
-  <p><strong>Vendredi :</strong> 11h30 – 22h30</p>
-  <p><strong>Samedi :</strong> 11h30 – 22h30</p>
-  <p><strong>Dimanche :</strong> 11h30 – 15h30</p>
-</div>
+<div class="content-wrapper">
 
-<div class="main-content">
-
-<section id="accueil">
-  <h2>Bienvenue au Quan Pho 83</h2>
-  <p>Découvrez notre cuisine vietnamienne raffinée, avec des plats faits maison préparés avec amour et des ingrédients frais de saison.</p>
-  <div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: center;">
-    <img src="https://via.placeholder.com/300x200?text=Restaurant" alt="Restaurant" style="margin:10px; border-radius:10px;">
-    <img src="https://via.placeholder.com/300x200?text=Plats" alt="Plats" style="margin:10px; border-radius:10px;">
-    <img src="https://via.placeholder.com/300x200?text=Desserts" alt="Desserts" style="margin:10px; border-radius:10px;">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>🕒 Horaires d'ouverture</h3>
+    <p><strong>Lundi :</strong> 11h30 – 22h30</p>
+    <p><strong>Mardi :</strong> 11h30 – 22h30</p>
+    <p><strong>Mercredi :</strong> 11h30 – 22h30</p>
+    <p><strong>Jeudi :</strong> 11h30 – 22h30</p>
+    <p><strong>Vendredi :</strong> 11h30 – 22h30</p>
+    <p><strong>Samedi :</strong> 11h30 – 22h30</p>
+    <p><strong>Dimanche :</strong> 11h30 – 15h30</p>
   </div>
-</section>
 
-<section id="menu">
-  <h2>Notre Menu</h2>
-  <div class="tabs">
-    <div class="tab active" data-tab="entrees">Entrées</div>
-    <div class="tab" data-tab="specialites">Spécialités</div>
-    <div class="tab" data-tab="plats">Plats</div>
-    <div class="tab" data-tab="desserts">Desserts</div>
-  </div>
-  <div class="menu-content active" id="entrees">
-    <div class="menu-item">
-      <h3>Nems au choix - 5.5€/3 pièces</h3>
-      <p>(Porc, poulet ou légume)</p>
-      <img src="images/nems.jpg" alt="Nems au choix" style="width:300px; height:auto; border-radius:10px;">
-    </div>
-    <div class="menu-item">
+  <!-- Contenu principal -->
+  <div class="main-content">
+
+    <section id="accueil">
+      <h2>Bienvenue au Quan Pho 83</h2>
+      <p>Découvrez notre cuisine vietnamienne raffinée, avec des plats faits maison préparés avec amour et des ingrédients frais de saison.</p>
+      <div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <img src="https://via.placeholder.com/300x200?text=Restaurant" alt="Restaurant">
+        <img src="https://via.placeholder.com/300x200?text=Plats" alt="Plats">
+        <img src="https://via.placeholder.com/300x200?text=Desserts" alt="Desserts">
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2>Notre Menu</h2>
+      <div class="tabs">
+        <div class="tab active" data-tab="entrees">Entrées</div>
+        <div class="tab" data-tab="specialites">Spécialités</div>
+        <div class="tab" data-tab="plats">Plats</div>
+        <div class="tab" data-tab="desserts">Desserts</div>
+      </div>
+      <div class="menu-content active" id="entrees">
+        <div class="menu-item">
+          <h3>Nems au choix - 5.5€/3 pièces</h3>
+          <p>(Porc, poulet ou légume)</p>
+        </div>
+        <div class="menu-item">
       <h3>Samoussa au boeuf - 5.5€/3 pièces</h3>
       <p>(Boeuf, petit pois, poireau, oignon)</p>
       <img src="images/samoussa.jpg" alt="Sasmoussa au boeuf" style="width:300px; height:auto; border-radius:10px;">
@@ -207,30 +198,30 @@
       <h3>Nougat - 4.5€</h3>
       <p>(Tendreté ou dur)</p>
     </div>
-  </div>
-</section>
+      </div>
+    </section>
 
-<section id="apropos">
-  <h2>À propos de nous</h2>
-  <p>Quan Pho 83 est un restaurant familial fondé en 2024, dédié à la cuisine vietnamienne traditionnelle. Nous vous accueillons dans un cadre chaleureux et convivial, pour partager un moment gourmand en famille ou entre amis.</p>
-</section>
+    <section id="apropos">
+      <h2>À propos de nous</h2>
+      <p>Quan Pho 83 est un restaurant familial fondé en 2024, dédié à la cuisine vietnamienne traditionnelle. Nous vous accueillons dans un cadre chaleureux et convivial.</p>
+    </section>
 
-<section id="reservation">
-  <h2>Réservation</h2>
-  <p>Pour réserver une table, cliquez sur le bouton ci-dessous :</p>
-  <a href="https://widget.thefork.com/fr/0f8a2928-4b60-462a-8800-3712ab7a77bc?origin=facebook&utm_medium=integration&utm_source=facebook&fbclid=IwY2xjawIqVshleHRuA2FlbQIxMAABHcQW1qLl6FBpYQzMh7JVAnK49cppksvyW0KrEQ8VUrLEVPJWOjGJxeuwlg_aem_aCc9IrAxpoGVCZ_tP-TlsQ" 
-     target="_blank" 
-     class="btn">
-     Réserver maintenant
-  </a>
-</section>
+    <section id="reservation">
+      <h2>Réservation</h2>
+      <p>Pour réserver une table, cliquez sur le bouton ci-dessous :</p>
+      <a href="#" target="_blank" class="btn">Réserver maintenant</a>
+    </section>
 
-<section id="contact">
-  <h2>Contactez-nous</h2>
-  <p><strong>Adresse :</strong> 11 rue Peyrolières, 31000 Toulouse</p>
-  <p><strong>Téléphone :</strong> 07 82 09 92 68</p>
-  <p><strong>Email :</strong> hoangthao2802@gmail.com</p>
-</section>
+    <section id="contact">
+      <h2>Contactez-nous</h2>
+      <p><strong>Adresse :</strong> 11 rue Peyrolières, 31000 Toulouse</p>
+      <p><strong>Téléphone :</strong> 07 82 09 92 68</p>
+      <p><strong>Email :</strong> hoangthao2802@gmail.com</p>
+    </section>
+
+  </div> <!-- fin main-content -->
+
+</div> <!-- fin content-wrapper -->
 
 <footer>
   <p>&copy; 2025 Quan Pho 83. Tous droits réservés.</p>
@@ -244,14 +235,11 @@
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-
       contents.forEach(c => c.classList.remove('active'));
       document.getElementById(tab.dataset.tab).classList.add('active');
     });
   });
 </script>
-
-</div> <!-- fin main-content -->
 
 </body>
 </html>

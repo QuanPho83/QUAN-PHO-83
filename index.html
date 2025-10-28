@@ -279,28 +279,61 @@
     </section>
 
 
-    <section id="avis" style="margin-top:40px; max-width:800px; margin-left:auto; margin-right:auto;">
-  <h2>Laisser un avis</h2>
-  <form action="#" method="post" style="display:flex; flex-direction:column; gap:10px;">
-    <label for="nom">Nom :</label>
-    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+    <section id="avis" style="max-width:800px; margin:auto; padding:50px 20px;">
+  <h2>Avis des clients</h2>
+  <p>Partagez votre expérience dans notre restaurant :</p>
 
-    <label for="note">Note :</label>
-    <select id="note" name="note" required>
-      <option value="">-- Sélectionnez --</option>
+  <form id="form-avis" style="display:flex; flex-direction:column; gap:10px; margin-bottom:30px;">
+    <input type="text" id="nom" placeholder="Votre nom" required>
+    <select id="note" required>
+      <option value="">-- Note --</option>
       <option value="5">⭐⭐⭐⭐⭐</option>
       <option value="4">⭐⭐⭐⭐</option>
       <option value="3">⭐⭐⭐</option>
       <option value="2">⭐⭐</option>
       <option value="1">⭐</option>
     </select>
-
-    <label for="message">Votre avis :</label>
-    <textarea id="message" name="message" rows="4" placeholder="Écrivez votre avis ici..." required></textarea>
-
+    <textarea id="message" rows="4" placeholder="Écrivez votre avis ici..." required></textarea>
     <button type="submit">Envoyer</button>
   </form>
+
+  <h3>Ce que nos clients disent :</h3>
+  <div id="liste-avis"></div>
 </section>
+
+<script>
+  const formAvis = document.getElementById('form-avis');
+  const listeAvis = document.getElementById('liste-avis');
+
+  formAvis.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nom = document.getElementById('nom').value.trim();
+    const note = document.getElementById('note').value;
+    const message = document.getElementById('message').value.trim();
+
+    if(!nom || !note || !message) return;
+
+    // Créer un bloc avis
+    const avisDiv = document.createElement('div');
+    avisDiv.style.border = "1px solid #ccc";
+    avisDiv.style.padding = "15px";
+    avisDiv.style.marginBottom = "15px";
+    avisDiv.style.borderRadius = "8px";
+    avisDiv.style.backgroundColor = "#f9f9f9";
+    avisDiv.innerHTML = `
+      <strong>${nom}</strong> - ${'⭐'.repeat(note)}<br>
+      <p>${message}</p>
+    `;
+
+    // Ajouter en haut de la liste
+    listeAvis.prepend(avisDiv);
+
+    // Réinitialiser le formulaire
+    formAvis.reset();
+  });
+</script>
+
 
 
 
@@ -328,6 +361,7 @@
 
 </body>
 </html>
+
 
 
 

@@ -12,32 +12,10 @@
     header { background-color: #c0392b; color: white; padding: 50px 20px; text-align: center; }
     header h1 { margin:0; font-size:3em; }
     header p { margin:10px 0 0 0; font-size:1.2em; }
-    nav { background: #e74c3c; display:flex; justify-content:center; flex-wrap:wrap; position:sticky; top:0; z-index:10; }
+    nav { background: #e74c3c; display:flex; justify-content:center; flex-wrap:wrap; }
     nav a { color:white; margin:10px 15px; text-decoration:none; font-weight:bold; font-size:1.1em; }
     nav a:hover { text-decoration: underline; }
-
-    /* Sidebar fixe à gauche */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 220px;
-      height: 100%;
-      background: #f8f8f8;
-      padding: 20px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-      overflow-y: auto;
-    }
-    .sidebar h3 { color: #c0392b; }
-    .sidebar p { margin:5px 0; }
-
-    /* Contenu principal */
-    .main-content {
-      margin-left: 240px;
-      padding: 50px 20px;
-      max-width: 1000px;
-    }
-
+    section { padding:50px 20px; max-width:1000px; margin:auto; }
     section h2 { color:#c0392b; margin-bottom:20px; }
     .tabs { display:flex; margin-bottom:20px; cursor:pointer; flex-wrap:wrap; }
     .tab { padding:10px 20px; background:#e74c3c; color:white; margin-right:5px; border-radius:5px; }
@@ -53,28 +31,28 @@
     input, textarea, select, button { margin-bottom:15px; padding:10px; font-size:1em; border-radius:5px; border:1px solid #ccc; }
     button { background:#c0392b; color:white; border:none; cursor:pointer; }
     button:hover { background:#e74c3c; }
+    @media(min-width:600px){.gallery{display:flex; justify-content:center; flex-wrap:wrap;}}
 
-    @media(max-width:768px) {
-      .sidebar { position: relative; width: 100%; height: auto; box-shadow:none; }
-      .main-content { margin-left: 0; }
+    /* Sidebar fixe à gauche */
+    .sidebar {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 220px;
+      background: #f8f8f8;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      border-radius: 0 10px 10px 0;
     }
+
+    .sidebar h3 { color:#c0392b; }
+
+    /* Décalage du contenu principal à droite de la sidebar */
+    .main-content { margin-left: 240px; }
   </style>
 </head>
 <body>
-
-<!-- Sidebar fixe -->
-<div class="sidebar">
-  <h3>🕒 Horaires d'ouverture</h3>
-  <p><strong>Lundi :</strong> 11h30 – 22h30</p>
-  <p><strong>Mardi :</strong> 11h30 – 22h30</p>
-  <p><strong>Mercredi :</strong> 11h30 – 22h30</p>
-  <p><strong>Jeudi :</strong> 11h30 – 22h30</p>
-  <p><strong>Vendredi :</strong> 11h30 – 22h30</p>
-  <p><strong>Samedi :</strong> 11h30 – 22h30</p>
-  <p><strong>Dimanche :</strong> 11h30 – 15h30</p>
-</div>
-
-<div class="main-content">
 
 <header style="background-image: url('images/header.jpg'); background-size: cover; background-position: center; padding: 80px 0; text-align: center; color: white;">
   <h1>QUAN PHO 83</h1>
@@ -90,10 +68,24 @@
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- Sidebar des horaires -->
+<div class="sidebar">
+  <h3>🕒 Horaires d'ouverture</h3>
+  <p><strong>Lundi :</strong> 11h30 – 22h30</p>
+  <p><strong>Mardi :</strong> 11h30 – 22h30</p>
+  <p><strong>Mercredi :</strong> 11h30 – 22h30</p>
+  <p><strong>Jeudi :</strong> 11h30 – 22h30</p>
+  <p><strong>Vendredi :</strong> 11h30 – 22h30</p>
+  <p><strong>Samedi :</strong> 11h30 – 22h30</p>
+  <p><strong>Dimanche :</strong> 11h30 – 15h30</p>
+</div>
+
+<div class="main-content">
+
 <section id="accueil">
   <h2>Bienvenue au Quan Pho 83</h2>
   <p>Découvrez notre cuisine vietnamienne raffinée, avec des plats faits maison préparés avec amour et des ingrédients frais de saison.</p>
-  <div class="gallery" style="display:flex; flex-wrap:wrap; justify-content:center;">
+  <div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: center;">
     <img src="https://via.placeholder.com/300x200?text=Restaurant" alt="Restaurant" style="margin:10px; border-radius:10px;">
     <img src="https://via.placeholder.com/300x200?text=Plats" alt="Plats" style="margin:10px; border-radius:10px;">
     <img src="https://via.placeholder.com/300x200?text=Desserts" alt="Desserts" style="margin:10px; border-radius:10px;">
@@ -108,8 +100,6 @@
     <div class="tab" data-tab="plats">Plats</div>
     <div class="tab" data-tab="desserts">Desserts</div>
   </div>
-
-  <!-- Entrées -->
   <div class="menu-content active" id="entrees">
     <div class="menu-item">
       <h3>Nems au choix - 5.5€/3 pièces</h3>
@@ -261,6 +251,7 @@
   });
 </script>
 
-</div>
+</div> <!-- fin main-content -->
+
 </body>
 </html>

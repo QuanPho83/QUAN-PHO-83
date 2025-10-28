@@ -59,6 +59,7 @@
   <a href="#apropos">À propos</a>
   <a href="#reservation">Réservation</a>
   <a href="#contact">Contact</a>
+  <a href="#avis">Avis</a>
 </nav>
 
 <div class="content-wrapper" style="display: flex; max-width: 1200px; margin: 20px auto;">
@@ -277,6 +278,32 @@
       <p><strong>Email :</strong> hoangthao2802@gmail.com</p>
     </section>
 
+
+    <section id="avis" style="margin-top:40px; max-width:800px; margin-left:auto; margin-right:auto;">
+  <h2>Laisser un avis</h2>
+  <form action="#" method="post" style="display:flex; flex-direction:column; gap:10px;">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+    <label for="note">Note :</label>
+    <select id="note" name="note" required>
+      <option value="">-- Sélectionnez --</option>
+      <option value="5">⭐⭐⭐⭐⭐</option>
+      <option value="4">⭐⭐⭐⭐</option>
+      <option value="3">⭐⭐⭐</option>
+      <option value="2">⭐⭐</option>
+      <option value="1">⭐</option>
+    </select>
+
+    <label for="message">Votre avis :</label>
+    <textarea id="message" name="message" rows="4" placeholder="Écrivez votre avis ici..." required></textarea>
+
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
+
+
   </div> <!-- fin main-content -->
 
 </div> <!-- fin content-wrapper -->
@@ -301,6 +328,7 @@
 
 </body>
 </html>
+
 
 
 

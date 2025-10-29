@@ -73,7 +73,11 @@
     margin: 0; /* loại bỏ khoảng cách thừa */
   }
   footer { background:#333; color:white; text-align:center; padding:20px; margin-top:40px; }
-  
+  @media screen and (max-width: 480px) {
+  footer img {
+    height: 25px;
+  }
+}
   /* FORM AVIS */
   #form-avis input, #form-avis select, #form-avis textarea, #form-avis button {
     width: 100%;
@@ -363,12 +367,7 @@ header p {
   <img src="images/logo.png" alt="Logo Quan Pho 83" style="height:40px; width:auto;">
 </footer>
 
-  @media screen and (max-width: 480px) {
-  footer img {
-    height: 25px;
-  }
-}
-
+  
 <script>
   // MENU TABS
   const tabs = document.querySelectorAll('.tab');
@@ -405,6 +404,7 @@ header p {
 
 </body>
 </html>
+
 
 
 

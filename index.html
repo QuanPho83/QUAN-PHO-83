@@ -6,7 +6,23 @@
 <title>Quan Pho 83 - Restaurant Vietnamien au centre de Toulouse</title>
 <style>
   body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
-  
+  /* Kích thước header: mặc định mobile */
+  header h1 {
+    font-size: 2em; /* mobile */
+  }
+  header h2 {
+    font-size: 1em; /* mobile */
+  }
+
+  /* Desktop */
+  @media screen and (min-width: 769px) {
+    header h1 {
+      font-size: 5em; /* lớn trên desktop */
+    }
+    header h2 {
+      font-size: 3em; /* lớn trên desktop */
+    }
+  }
   /* HEADER */
   header { 
     background-color: #c0392b; 
@@ -15,7 +31,7 @@
     text-align: center; 
     position: relative; 
   }
-  header img { position: absolute; top: 10px; left: 10px; width: 120px; height: auto; }
+  header img { position: absolute; top: 10px; left: 10px; width: 150px; height: auto; }
   header h1 { margin:0; font-size:3em; color:white; text-shadow:1px 1px 3px rgba(0,0,0,0.2); }
   header h2 { margin:0; font-size:1.5em; }
   header p { margin:10px 0 0 0; font-size:1em; }
@@ -358,6 +374,7 @@
 
 </body>
 </html>
+
 
 
 

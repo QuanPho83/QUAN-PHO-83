@@ -37,7 +37,7 @@
   }
   /* NAVIGATION */
   nav { background: #e74c3c; display:flex; justify-content:center; flex-wrap:wrap; overflow-x:auto; }
-  nav a { color:white; margin:10px 10px; text-decoration:none; font-weight:bold; font-size:1em; flex-shrink:0; }
+  nav a { color:white; margin:10px 10px; text-decoration:none; font-weight:bold; font-size:1.5em; flex-shrink:0; }
   nav a:hover { text-decoration: underline; }
 
   /* CONTENT WRAPPER */
@@ -362,10 +362,50 @@ header p {
   </div>
 </div>
 
-<footer style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 20px; background:#333; color:white;">
-  <p>&copy; 2025 Quan Pho 83. Tous droits réservés.</p>
-  <img src="images/logo.png" alt="Logo Quan Pho 83" style="height:60px; width:auto;">
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 Quan Pho 83. Tous droits réservés.</p>
+    <img src="images/logo.png" alt="Logo Quan Pho 83" class="footer-logo">
+  </div>
 </footer>
+
+<style>
+/* Footer */
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* text trái, logo phải */
+  align-items: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+  flex-wrap: wrap; /* responsive trên mobile */
+}
+
+.footer-container p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.footer-logo {
+  height: 60px;
+  width: auto;
+  margin-top: 5px; /* tạo khoảng cách khi wrap trên mobile */
+}
+
+/* Mobile: logo nhỏ hơn */
+@media screen and (max-width: 480px) {
+  .footer-logo {
+    height: 25px;
+    margin-top: 10px; /* vẫn giữ khoảng cách với text */
+  }
+  .footer-container {
+    justify-content: center;
+    flex-direction: column; /* text + logo xếp theo cột trên điện thoại */
+    gap: 5px;
+  }
+}
+</style>
+
 
   
 <script>
@@ -404,6 +444,7 @@ header p {
 
 </body>
 </html>
+
 
 
 

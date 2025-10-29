@@ -73,7 +73,7 @@
     margin: 0; /* loại bỏ khoảng cách thừa */
   }
   footer { background:#333; color:white; text-align:center; padding:20px; margin-top:40px; }
-  footer img { position: absolute; top: 5px; right: 20px; width: 70px; height: auto; }
+  
   /* FORM AVIS */
   #form-avis input, #form-avis select, #form-avis textarea, #form-avis button {
     width: 100%;
@@ -358,10 +358,16 @@ header p {
   </div>
 </div>
 
-<footer>
+<footer style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 20px; background:#333; color:white;">
   <p>&copy; 2025 Quan Pho 83. Tous droits réservés.</p>
-  <img src="images/logo.png" alt="Logo Quan Pho 83">
+  <img src="images/logo.png" alt="Logo Quan Pho 83" style="height:40px; width:auto;">
 </footer>
+
+  @media screen and (max-width: 480px) {
+  footer img {
+    height: 25px;
+  }
+}
 
 <script>
   // MENU TABS
@@ -399,6 +405,7 @@ header p {
 
 </body>
 </html>
+
 
 
 

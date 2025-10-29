@@ -70,10 +70,19 @@
     nav { justify-content:flex-start; }
   }
 
-  @media screen and (max-width: 480px) {
-    header img { width:100px; }
-    .tab { padding:8px 12px; font-size:0.8em; }
+  /* Mobile: thu nhỏ logo để không che chữ */
+@media screen and (max-width: 768px) {
+  header img {
+    width: 80px; /* nhỏ hơn desktop */
+    top: 5px;
+    left: 5px;
   }
+}
+@media screen and (max-width: 480px) {
+  header img {
+    width: 60px; /* cực nhỏ trên điện thoại bé */
+  }
+}
 </style>
 </head>
 <body>
@@ -349,5 +358,6 @@
 
 </body>
 </html>
+
 
 

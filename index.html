@@ -95,7 +95,12 @@
     .gallery { justify-content: center; }
     nav { justify-content:flex-start; }
   }
-
+  footer { background:#333; color:white; text-align:center; padding:20px; margin-top:40px; }
+  @media screen and (max-width: 480px) {
+  footer img {
+    height: 25px;
+  }
+}
   /* Mobile: thu nhỏ logo để không che chữ */
 @media screen and (max-width: 768px) {
   header img {
@@ -365,41 +370,10 @@ header p {
 </footer>
 
 <style>
-/* Footer */
-.footer-container {
-  display: flex;
-  justify-content: space-between; /* text trái, logo phải */
-  align-items: center;
-  padding: 10px 20px;
-  background: #333;
-  color: white;
-  flex-wrap: wrap; /* responsive trên mobile */
-}
-
-.footer-container p {
-  margin: 0;
-  font-size: 0.9em;
-}
-
-.footer-logo {
-  height: 60px;
-  width: auto;
-  margin-top: 0; /* tạo khoảng cách khi wrap trên mobile */
-}
-
-/* Mobile: logo nhỏ hơn */
-@media screen and (max-width: 480px) {
-  .footer-logo {
-    height: 25px;
-    margin-top: 10px; /* vẫn giữ khoảng cách với text */
-  }
-  .footer-container {
-    justify-content: center;
-    flex-direction: column; /* text + logo xếp theo cột trên điện thoại */
-    gap: 5px;
-  }
-}
-</style>
+<footer style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 20px; background:#333; color:white;">
+  <p>&copy; 2025 Quan Pho 83. Tous droits réservés.</p>
+  <img src="images/logo.png" alt="Logo Quan Pho 83" style="height:40px; width:auto;">
+</footer>
 
 
   

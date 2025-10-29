@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quan Pho 83 - Restaurant Vietnamien</title>
+<title>Quan Pho 83 - Restaurant Vietnamien au centre de Toulouse</title>
 <style>
   body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
   
@@ -27,7 +27,6 @@
 
   /* CONTENT WRAPPER */
   .content-wrapper { display: flex; max-width: 1200px; margin: 20px auto; padding: 0 10px; flex-wrap: wrap; }
-
   .sidebar { width: 220px; background: #f8f8f8; padding: 20px; border-radius: 10px; margin-right: 20px; flex-shrink:0; }
   .main-content { flex: 1; min-width: 300px; }
 
@@ -63,8 +62,9 @@
     header h1 { font-size:2em; }
     header h2 { font-size:1em; }
     header { padding: 40px 10px; }
-    .sidebar { width: 100%; margin-bottom: 20px; }
-    .main-content { padding:0; }
+    .content-wrapper { flex-direction: column; }
+    .sidebar { width: 100%; margin:0 0 20px 0; }
+    .main-content { width: 100%; padding:0; }
     .menu-content .menu-item { flex: 1 1 100%; }
     .gallery { justify-content: center; }
     nav { justify-content:flex-start; }
@@ -113,6 +113,7 @@
   </div>
 
   <div class="main-content">
+
     <section id="accueil">
       <h2>Bienvenue au Quan Pho 83</h2>
       <p>Découvrez nos spécialités vietnamiennes, préparées avec amour et ingrédients frais.</p>
@@ -124,136 +125,177 @@
       </div>
     </section>
 
-    <!-- MENU SECTION -->
+    <!-- FULL MENU SECTION -->
     <section id="menu">
-  <h2>Notre Menu</h2>
+      <h2>Notre Menu</h2>
+      <div class="tabs">
+        <div class="tab active" data-tab="entrees">Entrées</div>
+        <div class="tab" data-tab="specialites">Spécialités</div>
+        <div class="tab" data-tab="plats">Plats</div>
+        <div class="tab" data-tab="desserts">Desserts</div>
+      </div>
 
-  <!-- Onglets -->
-  <div class="tabs">
-    <div class="tab active" data-tab="entrees">Entrées</div>
-    <div class="tab" data-tab="specialites">Spécialités</div>
-    <div class="tab" data-tab="plats">Plats</div>
-    <div class="tab" data-tab="desserts">Desserts</div>
+      <!-- Entrées -->
+      <div class="menu-content active" id="entrees">
+        <div class="menu-item">
+          <h3>Nems au choix - 5.5€/3 pièces</h3>
+          <p>(Porc, poulet ou légume)</p>
+          <img src="images/nems.jpg" alt="Nems">
+        </div>
+        <div class="menu-item">
+          <h3>Samoussa au boeuf - 5.5€/3 pièces</h3>
+          <p>(Boeuf, petit pois, poireau, oignon)</p>
+          <img src="images/samoussa.jpg" alt="Samoussa au boeuf">
+        </div>
+        <div class="menu-item">
+          <h3>Beignets de crevette - 5.5€/3 pièces</h3>
+          <p>(Crevettes)</p>
+          <img src="images/Beignets.jpg" alt="Beignets de crevette">
+        </div>
+        <div class="menu-item">
+          <h3>Salade de poulets - 6.5€</h3>
+          <p>(Salade, soja, carotte râpée, concombre, poulet)</p>
+        </div>
+        <div class="menu-item">
+          <h3>Salade de crevettes - 7.5€</h3>
+          <p>(Salade, soja, carotte râpée, concombre, crevettes)</p>
+        </div>
+        <div class="menu-item">
+          <h3>Salade de nems - 7.0€</h3>
+          <p>(Salade, soja, carotte râpée, concombre, nems)</p>
+        </div>
+        <div class="menu-item">
+          <h3>Rouleau de printemps - 7.0€/2 pièces</h3>
+          <p>(Vermicelle de riz, crevettes, salade, soja, carotte râpée, concombre)</p>
+        </div>
+      </div>
+
+      <!-- Spécialités -->
+      <div class="menu-content" id="specialites">
+        <div class="menu-item">
+          <h3>Soupe Pho boeuf</h3>
+          <p>(Vermicelle de riz, boeuf, soja, oignon, coriandre, ciboulette)</p>
+          <img src="images/pho.jpg" alt="Pho boeuf">
+        </div>
+        <div class="menu-item">
+          <h3>Bun cha Hanoi</h3>
+          <p>(Vermicelle de riz, porc grillé, salade, menthe, coriandre, oignon frit, sauce nuoc mam)</p>
+          <img src="images/buncha.jpg" alt="Bun cha Hanoi">
+        </div>
+        <div class="menu-item">
+          <h3>Bo (boeuf) bun nem</h3>
+          <p>(Vermicelle de riz, nems, boeuf sauté, salade, soja, carotte râpée, concombre, menthe, cacahuète, oignon frit, sauce nuoc mam)</p>
+          <img src="images/bobunnem.jpg" alt="Bo (boeuf) bun nem">
+        </div>
+        <div class="menu-item">
+          <h3>Poulet bun nem</h3>
+          <p>(Vermicelle de riz, nems, poulet sauté, salade, soja, carotte râpée, concombre, menthe, cacahuète, oignon frit, sauce nuoc mam)</p>
+        </div>
+        <div class="menu-item">
+          <h3>Végétarien bun nem</h3>
+          <p>(Vermicelle de riz, nems au légume, tofu, salade, soja, carotte râpée, concombre, menthe, cacahuète, oignon frit, sauce nuoc mam)</p>
+        </div>
+        <div class="menu-item">
+          <h3>Nouille sautée au choix</h3>
+          <p>(Légume, porc, poulet, crevette, boeuf)</p>
+          <img src="images/nouille.jpg" alt="Nouille sauté">
+        </div>
+      </div>
+
+      <!-- Plats -->
+      <div class="menu-content" id="plats">
+        <div class="menu-item">
+          <h3>Poulet sauce au choix - 14.5€</h3>
+          <p>(Curry, caramel, teriyaki ou noix de cajou)</p>
+          <img src="images/poulet2.jpg" alt="Poulet sauce">
+        </div>
+        <div class="menu-item">
+          <h3>Porc sauce au choix - 14.5€</h3>
+          <p>(Saté, caramel, teriyaki ou noix de cajou)</p>
+          <img src="images/porc.jpg" alt="Porc sauce">
+        </div>
+        <div class="menu-item">
+          <h3>Crevette sauce au choix - 15.5€</h3>
+          <p>(Curry, caramel, teriyaki ou noix de cajou)</p>
+        </div>
+        <div class="menu-item">
+          <h3>Boeuf sauce au choix - 15.5€</h3>
+          <p>(Saté)</p>
+          <img src="images/boeuf.jpg" alt="Boeuf sauce">
+        </div>
+      </div>
+
+      <!-- Desserts -->
+      <div class="menu-content" id="desserts">
+        <div class="menu-item">
+          <h3>Perle de coco - 5.5€</h3>
+          <p>(2 boules)</p>
+        </div>
+        <div class="menu-item">
+          <h3>Mousse au chocolat - 5.5€</h3>
+          <p>Délicieuse mousse légère et onctueuse.</p>
+        </div>
+        <div class="menu-item">
+          <h3>Perle de tapioca, mangue au lait de coco - 5.5€</h3>
+          <p>(Perle de tapioca, mangue, lait de coco)</p>
+        </div>
+        <div class="menu-item">
+          <h3>Mochi - 4.5€</h3>
+          <p>(Thé vert, sésame, lychee)</p>
+        </div>
+        <div class="menu-item">
+          <h3>Nougat - 4.5€</h3>
+          <p>(Tendreté ou dur)</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- À propos -->
+    <section id="apropos">
+      <h2>À propos de nous</h2>
+      <p>Quan Pho 83 est un restaurant familial fondé en octobre 2024, dédié à la cuisine vietnamienne traditionnelle. Rien n’est caché: nous préparons vos repas directement devant vous. Nous vous accueillons dans une ambiance chaleureuse et conviviale, pour partager un moment de plaisir autour de plats faits maison.</p>
+    </section>
+
+    <!-- Réservation -->
+    <section id="reservation">
+      <h2>Réservation</h2>
+      <p>Pour réserver une table, cliquez sur le bouton ci-dessous :</p>
+      <a href="https://widget.thefork.com/fr/0f8a2928-4b60-462a-8800-3712ab7a77bc?origin=facebook&utm_medium=integration&utm_source=facebook" 
+         target="_blank" 
+         style="display:inline-block; background:#c0392b; color:white; padding:12px 20px; border-radius:5px; text-decoration:none; margin-top:10px;">
+         Réserver maintenant
+      </a>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contactez-nous</h2>
+      <p><strong>Adresse :</strong> 11 rue Peyrolières, 31000 Toulouse</p>
+      <p><strong>Téléphone :</strong> 07 82 09 92 68</p>
+      <p><strong>Email :</strong> hoangthao2802@gmail.com</p>
+    </section>
+
+    <!-- Avis -->
+    <section id="avis">
+      <h2>Avis des clients</h2>
+      <form id="form-avis">
+        <input type="text" id="nom" placeholder="Votre nom" required>
+        <select id="note" required>
+          <option value="">-- Note --</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
+        </select>
+        <textarea id="message" rows="4" placeholder="Écrivez votre avis ici..." required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+      <div id="liste-avis"></div>
+    </section>
+
   </div>
-
-  <!-- Entrées -->
-  <div class="menu-content active" id="entrees">
-    <div class="menu-item">
-      <h3>Nems au choix - 5.5€/3 pièces</h3>
-      <p>(Porc, poulet ou légume)</p>
-      <img src="images/nems.jpg" alt="Nems au choix">
-    </div>
-    <div class="menu-item">
-      <h3>Samoussa au boeuf - 5.5€/3 pièces</h3>
-      <p>(Boeuf, petit pois, poireau, oignon)</p>
-      <img src="images/samoussa.jpg" alt="Samoussa au boeuf">
-    </div>
-    <div class="menu-item">
-      <h3>Beignets de crevette - 5.5€/3 pièces</h3>
-      <p>(Crevettes)</p>
-      <img src="images/Beignets.jpg" alt="Beignets de crevette">
-    </div>
-    <div class="menu-item">
-      <h3>Salade de poulets - 6.5€</h3>
-      <p>(Salade, soja, carotte râpée, concombre, poulet)</p>
-    </div>
-    <div class="menu-item">
-      <h3>Salade de crevettes - 7.5€</h3>
-      <p>(Salade, soja, carotte râpée, concombre, crevettes)</p>
-    </div>
-    <div class="menu-item">
-      <h3>Salade de nems - 7.0€</h3>
-      <p>(Salade, soja, carotte râpée, concombre, nems)</p>
-    </div>
-    <div class="menu-item">
-      <h3>Rouleau de printemps - 7.0€/2 pièces</h3>
-      <p>(Vermicelle de riz, crevettes, salade, soja, carotte râpée, concombre)</p>
-    </div>
-  </div>
-
-  <!-- Spécialités -->
-  <div class="menu-content" id="specialites">
-    <div class="menu-item">
-      <h3>Soupe Pho boeuf</h3>
-      <p>(Vermicelle de riz, boeuf (cuit et saignant), soja, oignon, coriandre, ciboulette)</p>
-      <img src="images/pho.jpg" alt="Soupe Pho boeuf">
-    </div>
-    <div class="menu-item">
-      <h3>Bun cha Hanoi</h3>
-      <p>(Vermicelle de riz, porc grillé, salade, menthe, coriandre, oignon frit, sauce nuoc mam)</p>
-      <img src="images/buncha.jpg" alt="Bun cha Hanoi">
-    </div>
-    <div class="menu-item">
-      <h3>Bo (boeuf) bun nem</h3>
-      <p>(Vermicelle de riz, nems, boeuf sauté, salade, soja, carotte râpée, concombre, menthe, cacahuète, oignon frit, sauce nuoc mam)</p>
-      <img src="images/bobunnem.jpg" alt="Bo (boeuf) bun nem">
-    </div>
-    <div class="menu-item">
-      <h3>Poulet bun nem</h3>
-      <p>(Vermicelle de riz, nems, poulet sauté, salade, soja, carotte râpée, concombre, menthe, cacahuète, oignon frit, sauce nuoc mam)</p>
-    </div>
-    <div class="menu-item">
-      <h3>Végétarien bun nem</h3>
-      <p>(Vermicelle de riz, nems au légume, tofu, salade, soja, carotte râpée, concombre, menthe, cacahuète, oignon frit, sauce nuoc mam)</p>
-    </div>
-    <div class="menu-item">
-      <h3>Nouille sautée au choix</h3>
-      <p>(Légume, porc, poulet, crevette, boeuf)</p>
-      <img src="images/nouille.jpg" alt="Nouille sauté">
-    </div>
-  </div>
-
-  <!-- Plats -->
-  <div class="menu-content" id="plats">
-    <div class="menu-item">
-      <h3>Poulet sauce au choix, avec du riz blanc - 14.5€</h3>
-      <p>(Curry, caramel, teriyaki ou noix de cajou)</p>
-      <img src="images/poulet2.jpg" alt="Poulet sauce">
-    </div>
-    <div class="menu-item">
-      <h3>Porc sauce au choix, avec du riz blanc - 14.5€</h3>
-      <p>(Saté, caramel, teriyaki ou noix de cajou)</p>
-      <img src="images/porc.jpg" alt="Porc sauce">
-    </div>
-    <div class="menu-item">
-      <h3>Crevette sauce au choix, avec du riz blanc - 15.5€</h3>
-      <p>(Curry, caramel, teriyaki ou noix de cajou)</p>
-    </div>
-    <div class="menu-item">
-      <h3>Boeuf sauce au choix, avec du riz blanc - 15.5€</h3>
-      <p>(Saté)</p>
-      <img src="images/boeuf.jpg" alt="Boeuf sauce">
-    </div>
-  </div>
-
-  <!-- Desserts -->
-  <div class="menu-content" id="desserts">
-    <div class="menu-item">
-      <h3>Perle de coco - 5.5€</h3>
-      <p>(2 boules)</p>
-    </div>
-    <div class="menu-item">
-      <h3>Mousse au chocolat - 5.5€</h3>
-      <p>Délicieuse mousse légère et onctueuse.</p>
-    </div>
-    <div class="menu-item">
-      <h3>Perle de tapioca, mangue au lait de coco - 5.5€</h3>
-      <p>(Perle de tapioca, mangue, lait de coco)</p>
-    </div>
-    <div class="menu-item">
-      <h3>Mochi - 4.5€</h3>
-      <p>(Thé vert, sésame, lychee)</p>
-    </div>
-    <div class="menu-item">
-      <h3>Nougat - 4.5€</h3>
-      <p>(Tendreté ou dur)</p>
-    </div>
-  </div>
-
-</section>
-
-  </div>
-
 </div>
 
 <footer>
@@ -261,10 +303,9 @@
 </footer>
 
 <script>
-  // TABS MENU
+  // MENU TABS
   const tabs = document.querySelectorAll('.tab');
   const contents = document.querySelectorAll('.menu-content');
-
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
@@ -272,6 +313,26 @@
       contents.forEach(c => c.classList.remove('active'));
       document.getElementById(tab.dataset.tab).classList.add('active');
     });
+  });
+
+  // FORM AVIS
+  const formAvis = document.getElementById('form-avis');
+  const listeAvis = document.getElementById('liste-avis');
+  formAvis.addEventListener('submit', function(e){
+    e.preventDefault();
+    const nom = document.getElementById('nom').value.trim();
+    const note = document.getElementById('note').value;
+    const message = document.getElementById('message').value.trim();
+    if(!nom || !note || !message) return;
+    const avisDiv = document.createElement('div');
+    avisDiv.style.border="1px solid #ccc";
+    avisDiv.style.padding="10px";
+    avisDiv.style.marginBottom="10px";
+    avisDiv.style.borderRadius="5px";
+    avisDiv.style.backgroundColor="#f9f9f9";
+    avisDiv.innerHTML = `<strong>${nom}</strong> - ${'⭐'.repeat(note)}<br><p>${message}</p>`;
+    listeAvis.prepend(avisDiv);
+    formAvis.reset();
   });
 </script>
 

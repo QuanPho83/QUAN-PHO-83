@@ -60,6 +60,18 @@
 
   .gallery img { width:100%; max-width:300px; margin:10px; border-radius:10px; }
 
+  /* Giảm khoảng cách menu-item */
+  .menu-content .menu-item {
+    margin-bottom: 10px; /* khoảng cách giữa các món */
+  }
+
+  .menu-content .menu-item h3 {
+    margin: 0 0 3px 0; /* giảm khoảng cách giữa tên món và mô tả */
+  }
+
+  .menu-content .menu-item p {
+    margin: 0; /* loại bỏ khoảng cách thừa */
+  }
   footer { background:#333; color:white; text-align:center; padding:20px; margin-top:40px; }
 
   /* FORM AVIS */
@@ -211,12 +223,12 @@ header p {
       <div class="menu-content" id="specialites">
         <div class="menu-item">
           <h3>Soupe Pho boeuf</h3>
-          <p style="margin: 2px 0;">(Vermicelle de riz, boeuf (cuit et saignant), soja, oignon, coriandre, ciboulette)</p>
+          <p>(Vermicelle de riz, boeuf (cuit et saignant), soja, oignon, coriandre, ciboulette)</p>
           <img src="images/pho.jpg" alt="Pho boeuf">
         </div>
         <div class="menu-item">
           <h3>Bun cha Hanoi</h3>
-          <p style="margin: 1px 0;">(Vermicelle de riz, porc grillé, salade, menthe, coriandre, oignon frit, sauce nuoc mam)</p>
+          <p>(Vermicelle de riz, porc grillé, salade, menthe, coriandre, oignon frit, sauce nuoc mam)</p>
           <img src="images/buncha.jpg" alt="Bun cha Hanoi">
         </div>
         <div class="menu-item">
@@ -386,6 +398,7 @@ header p {
 
 </body>
 </html>
+
 
 
 

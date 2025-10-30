@@ -168,18 +168,35 @@ header p {
   <div class="main-content">
 
     <section id="accueil">
-      <h2>Bienvenue au Quan Pho 83</h2>
-      <p>Découvrez nos spécialités vietnamiennes, avec des plats faits maison préparés avec amour et des ingrédients frais de saison.</p>
-      <div class="gallery" style="
+  <h2>Bienvenue au Quan Pho 83</h2>
+  <p>Découvrez nos spécialités vietnamiennes, avec des plats faits maison préparés avec amour et des ingrédients frais de saison.</p>
+  <div class="gallery">
+    <img src="accueil.png" alt="Accueil - Cuisine vietnamienne" class="gallery-image">
+  </div>
+</section>
+#accueil {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.gallery {
   display: flex;
   justify-content: center;
   margin: 20px 0;
-">
-  <img src="accueil.png" 
-       alt="Accueil - Cuisine vietnamienne" 
-       style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-</div>
-    </section>
+}
+
+.gallery-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
 
     <!-- FULL MENU SECTION -->
     <section id="menu">
@@ -410,6 +427,7 @@ header p {
 
 </body>
 </html>
+
 
 
 
